@@ -35,7 +35,7 @@ import haruka.modules.sql.feds_sql as sql
 #
 # Total spended for making this features is 68+ hours
 
-LOGGER.info("Original federation module by MrYacha, reworked by Mizukito Akito (@RealAkito) on Telegram.")
+LOGGER.info("Original federation module by Mrthanosxd")
 
 
 FBAN_ERRORS = {
@@ -583,7 +583,7 @@ def unfban(bot: Bot, update: Update, args: List[str]):
 		except TelegramError:
 			pass
 
-		try:
+		try: 
 			x = sql.un_fban_user(fed_id, user_id)
 			if not x:
 				message.reply_text("Fban failure, this user may have been un-fedbanned!")
